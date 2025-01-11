@@ -1,2 +1,2 @@
-mod config;
-mod database;
+pub mod config;
+pub mod database;

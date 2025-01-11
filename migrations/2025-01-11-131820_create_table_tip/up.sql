@@ -1,5 +1,4 @@
--- Active: 1736389112589@@127.0.0.1@5432@tipspace
--- Add up migration script here
+-- Your SQL goes here
 CREATE TABLE tips (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   for_user_id UUID NOT NULL,

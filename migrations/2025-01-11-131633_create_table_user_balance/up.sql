@@ -1,5 +1,5 @@
--- Add up migration script here
-CREATE TABLE balances (
+-- Your SQL goes here
+CREATE TABLE user_balances (
   user_id UUID PRIMARY KEY,
   available FLOAT DEFAULT 0,
   pending FLOAT DEFAULT 0,

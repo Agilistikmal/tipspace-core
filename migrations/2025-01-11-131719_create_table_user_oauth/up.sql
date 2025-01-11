@@ -1,5 +1,5 @@
--- Add up migration script here
-CREATE TABLE oauths (
+-- Your SQL goes here
+CREATE TABLE user_oauths (
   user_id UUID PRIMARY KEY,
   google_id VARCHAR(100),
   discord_id VARCHAR(100),
@@ -13,10 +13,10 @@ CREATE TABLE oauths (
 );
 
 CREATE UNIQUE INDEX "oauths_google_id_unique"
-ON oauths(google_id, deleted_at) WHERE deleted_at IS NULL;
+ON user_oauths(google_id, deleted_at) WHERE deleted_at IS NULL;
 
 CREATE UNIQUE INDEX "oauths_discord_id_unique"
-ON oauths(discord_id, deleted_at) WHERE deleted_at IS NULL;
+ON user_oauths(discord_id, deleted_at) WHERE deleted_at IS NULL;
 
 CREATE UNIQUE INDEX "oauths_x_id_unique"
-ON oauths(x_id, deleted_at) WHERE deleted_at IS NULL;
+ON user_oauths(x_id, deleted_at) WHERE deleted_at IS NULL;
